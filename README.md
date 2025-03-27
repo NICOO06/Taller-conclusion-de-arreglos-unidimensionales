@@ -1,10 +1,4 @@
 # Taller conclusion de arreglos unidimensionales
-# Carpeta del repositorio
-repositorio/
-│-- codigo_python.py  # Código en Python para manejar vértices y caras
-│-- codigo_cpp.cpp    # Código en C++ para manejar vértices y caras
-│-- README.md         # Instrucciones detalladas sobre el código y su ejecución
-
 # Archivo: codigo_python.py
 
 vertices = []
@@ -77,8 +71,6 @@ int main() {
     }
     return 0;
 }
-
-# Archivo: README.md
 
 # Proyecto de Vértices y Caras
 
