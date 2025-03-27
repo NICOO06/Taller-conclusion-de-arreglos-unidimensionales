@@ -1,5 +1,7 @@
-# Taller conclusion de arreglos unidimensionales
-# Archivo: codigo_python.py
+# Taller conclusión de arreglos unidimensionales
+### Nicolas A. Vargas Angarita - Sergio Prieto Vargas
+## Codigo python
+``` python
 vertices = []
 caras = []
 
@@ -24,51 +26,52 @@ for i, v in enumerate(vertices, 1):
 print("\nCaras:")
 for i, c in enumerate(caras, 1):
     print(f"F{i}: {c}")
-
-# Archivo: codigo_cpp.cpp
-
+```
+# Codigo C++
+``` C++
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main() {
-    vector<string> vertices;
-    vector<string> caras;
-    int num_vertices, num_caras;
+    float vertices[100][3];
+    int caras[100][10], total_vertices, total_caras, cantidad_vertices;
 
-    cout << "¿Cuántos vértices hay? ";
-    cin >> num_vertices;
+    cout << "Ingrese la cantidad de vértices: ";
+    cin >> total_vertices;
 
-    for (int i = 0; i < num_vertices; i++) {
-        string x, y, z;
-        cout << "Vértice " << i+1 << " - X: ";
-        cin >> x;
-        cout << "Vértice " << i+1 << " - Y: ";
-        cin >> y;
-        cout << "Vértice " << i+1 << " - Z: ";
-        cin >> z;
-        vertices.push_back(x + " " + y + " " + z);
+    for (int i = 0; i < total_vertices; i++) {
+        cout << "Vértice " << i+1 << ":\n";
+        cout << "  Coordenada X: "; cin >> vertices[i][0];
+        cout << "  Coordenada Y: "; cin >> vertices[i][1];
+        cout << "  Coordenada Z: "; cin >> vertices[i][2];
     }
 
-    cout << "¿Cuántas caras hay? ";
-    cin >> num_caras;
-    cin.ignore();
+    cout << "Ingrese la cantidad de caras: ";
+    cin >> total_caras;
 
-    for (int i = 0; i < num_caras; i++) {
-        string cara;
-        cout << "Índices de la cara " << i+1 << " (separados por espacio): ";
-        getline(cin, cara);
-        caras.push_back(cara);
+    for (int i = 0; i < total_caras; i++) {
+        cout << "Ingrese la cantidad de vértices para la cara " << i+1 << ": ";
+        cin >> cantidad_vertices;
+        cout << "Ingrese los índices de los vértices de la cara " << i+1 << " (separados por espacio): ";
+        for (int j = 0; j < cantidad_vertices; j++) {
+            cin >> caras[i][j];
+        }
+        caras[i][cantidad_vertices] = -1; // Marcador de fin
     }
 
-    cout << "\nVértices:\n";
-    for (int i = 0; i < num_vertices; i++) {
-        cout << "V" << i+1 << ": " << vertices[i] << endl;
+    cout << "\nLista de Vértices:\n";
+    for (int i = 0; i < total_vertices; i++) {
+        cout << "V" << i+1 << ": (" << vertices[i][0] << ", " << vertices[i][1] << ", " << vertices[i][2] << ")\n";
     }
 
-    cout << "\nCaras:\n";
-    for (int i = 0; i < num_caras; i++) {
-        cout << "F" << i+1 << ": " << caras[i] << endl;
+    cout << "\nLista de Caras:\n";
+    for (int i = 0; i < total_caras; i++) {
+        cout << "F" << i+1 << ": ";
+        for (int j = 0; caras[i][j] != -1; j++) {
+            cout << caras[i][j] << " ";
+        }
+        cout << "\n";
     }
     return 0;
 }
+```
