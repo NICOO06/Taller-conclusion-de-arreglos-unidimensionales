@@ -71,31 +71,3 @@ int main() {
     }
     return 0;
 }
-
-# Proyecto de Vértices y Caras
-
-Este repositorio contiene dos programas en **Python** y **C++** que permiten ingresar y visualizar una estructura 3D basada en vértices y caras.
-
-## Instrucciones de uso
-
-### Python
-1. Ejecuta el archivo con:
-   ```
-   python codigo_python.py
-   ```
-2. Ingresa la cantidad de vértices.
-3. Ingresa las coordenadas **X, Y, Z** de cada vértice.
-4. Ingresa la cantidad de caras.
-5. Ingresa los índices de los vértices que forman cada cara.
-6. Se imprimirá la estructura 3D.
-
-### C++
-1. Compila el código con:
-   ```
-   g++ codigo_cpp.cpp -o programa
-   ```
-2. Ejecuta el programa:
-   ```
-   ./programa
-   ```
-3. Sigue los mismos pasos que en Python.
