@@ -1,28 +1,36 @@
 # Taller conclusion de arreglos unidimensionales
 # Archivo: codigo_python.py
 
+# Lista para almacenar los vértices y caras
 vertices = []
 caras = []
 
+# Pedir cuántos vértices hay
 num_vertices = int(input("¿Cuántos vértices hay? "))
+
+# Leer vértices con coordenadas X, Y, Z
 for i in range(num_vertices):
-    x = input(f"Vértice {i+1} - X: ")
-    y = input(f"Vértice {i+1} - Y: ")
-    z = input(f"Vértice {i+1} - Z: ")
+    x = float(input(f"Vértice {i+1} - X: "))
+    y = float(input(f"Vértice {i+1} - Y: "))
+    z = float(input(f"Vértice {i+1} - Z: "))
     vertices.append((x, y, z))
 
+# Pedir cuántas caras hay
 num_caras = int(input("¿Cuántas caras hay? "))
+
+# Leer caras (lista de índices de vértices)
 for i in range(num_caras):
-    cara = input(f"Índices de la cara {i+1} (separados por espacio): ")
+    cara = list(map(int, input(f"Índices de la cara {i+1} (separados por espacio): ").split()))
     caras.append(cara)
 
+# Mostrar la lista de vértices y caras
 print("\nVértices:")
-for i in range(num_vertices):
-    print(f"V{i+1}: {vertices[i]}")
+for i, v in enumerate(vertices, 1):
+    print(f"V{i}: {v}")
 
 print("\nCaras:")
-for i in range(num_caras):
-    print(f"F{i+1}: {caras[i]}")
+for i, c in enumerate(caras, 1):
+    print(f"F{i}: {c}")
 
 # Archivo: codigo_cpp.cpp
 
