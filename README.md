@@ -116,7 +116,7 @@ F1: [0, 1, 2]
 
 ## Requisitos
 
-- **Python 3.x** o un compilador de **C++11** o superior.
+- **Python** o un compilador de **C++**.
 
 ## Instalación y Ejecución
 
