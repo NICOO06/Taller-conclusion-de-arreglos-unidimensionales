@@ -141,20 +141,10 @@ g++ generador_vertices.cpp -o generador
 ./generador
 ```
 
-## Contribución
-
-¡Las contribuciones son bienvenidas! Para colaborar:
-1. Realiza un **fork** del repositorio.
-2. Crea una nueva rama (`git checkout -b feature-nueva`).
-3. Realiza tus cambios y haz un commit (`git commit -m "Descripción del cambio"`).
-4. Sube los cambios a tu repositorio (`git push origin feature-nueva`).
-5. Abre un **Pull Request** en este repositorio.
-
 ## Referencias
 
 - [Documentación oficial de Python](https://docs.python.org/3/)
 - [Referencia de C++](https://en.cppreference.com/)
 - [GitHub - Guía básica para principiantes](https://docs.github.com/en/get-started)
-- [Formatos de archivos 3D más comunes](https://www.profesionalreview.com/2022/03/13/formatos-mas-comunes-para-la-impresion-3d/)
 - [Visualización de objetos 3D con OpenGL](https://www.youtube.com/watch?v=KsTrG83YZMg)
 - [Modelado poligonal - Wikipedia](https://es.wikipedia.org/wiki/Modelado_poligonal)
